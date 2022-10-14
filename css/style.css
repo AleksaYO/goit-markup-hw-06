@@ -305,6 +305,8 @@ section {
   left: 50%;
   translate: -50% -50%;
 
+  padding: 40px;
+
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -321,6 +323,135 @@ section {
 .modal-button:hover .icon-modal,
 .modal-button:focus .icon-modal {
   transform: rotateZ(360deg);
+}
+
+.modal-tittle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+
+  margin-bottom: 12px;
+}
+
+.form-text-modal {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+
+  margin-bottom: 4px;
+
+  color: #757575;
+}
+
+.form-name-box {
+  margin-bottom: 10px;
+}
+.form-tel-box {
+  margin-bottom: 10px;
+}
+.form-email-box {
+  margin-bottom: 10px;
+}
+.form-textarea-box {
+  margin-bottom: 20px;
+}
+
+.modal-name {
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-tel {
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-email {
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.textarea {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding-top: 12px;
+  padding-left: 16px;
+}
+
+.checkbox-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.checkbox-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.checkbox-link {
+  color: #2196f3;
+  text-decoration: underline;
+}
+
+.form-modal-btn {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+
+  margin: 0 auto;
+  padding: 10px 52px;
+
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
+}
+
+.form-modal-btn:hover,
+.form-modal-btn:focus {
+  background-color: #188ce8;
+  transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
 }
 
 /* --------------------------------------------- Чому ми? --------------------------------------------- */

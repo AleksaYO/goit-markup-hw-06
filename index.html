@@ -308,7 +308,7 @@
                   <a href="#" class="team-icon-link">
                     <svg width="20" height="20">
                       <use href="./images/sprite.svg#icon-instagram-team"></use>
-                    </svg>
+                    </svg>ss
                   </a>
                 </li>
                 <li class="team-icon-item">
@@ -462,10 +462,9 @@
               type="email"
               placeholder="E-mail"
               name="email"
-              autofocus
               autocomplete="email"
             />
-          </label>
+        </label>
           <button type="submit" class="form-btn">
             Підписатися
             <svg width="24" height="24">
@@ -479,6 +478,38 @@
     </footer>
     <div data-modal class="backdrop is-hidden">
       <div class="modal">
+        <p class="modal-tittle">Залиште свої дані, ми вам передзвонимо</p>
+          <form>
+            <div class="form-name-box">
+              <label for="name">
+                <p class="form-text-modal">Ім'я</p>
+                <input type="name" class="modal-name" id="name" name="name" autocomplete="name" placeholder="">
+              </label>
+            </div>
+            <div class="form-tel-box">
+              <label for="tel">
+                <p class="form-text-modal">Телефон</p>
+                <input type="tel" class="modal-tel" id="tel" name="tel" autocomplete="tel">
+              </label> 
+            </div>
+            <div class="form-email-box">
+              <label for="modal-email">
+                <p class="form-text-modal">Пошта</p>
+                <input type="email" class="modal-email" id="modal-email" name="modal-email" autocomplete="email">
+              </label>
+            </div>
+            <div class="form-textarea-box">
+              <label for="textarea">
+                <p class="form-text-modal">Коментар</p>
+                <textarea class="textarea" name="textarea" id="textarea" rows="8" placeholder="Введіть текст"></textarea>
+              </label>
+              </div>
+              <label for="agree" class="checkbox-flex">
+                <input type="checkbox" class="modal-checkbox" id="checkbox" name="agree">
+                <p class="checkbox-text">Погоджуюся з розсилкою та приймаю <a href="#" class="checkbox-link">Умови договору</a></p>
+              </label>
+            <button type="submit" class="form-modal-btn">Відправити</button>
+          </form>
         <button type="button" data-modal-close class="modal-button">
           <svg class="icon-modal" width="11" height="11">
             <use href="./images/sprite.svg#icon-close"></use>
