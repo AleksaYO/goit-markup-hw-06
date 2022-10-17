@@ -280,7 +280,7 @@ section {
   width: 30px;
   height: 30px;
   background: #ffffff;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
 
@@ -292,7 +292,7 @@ section {
 
 .modal-button:hover,
 .modal-button:focus {
-  border: 2px solid var(--hover-color);
+  border: 1px solid var(--hover-color);
   transition: border 250ms var(--cubic), fill 250ms var(--cubic);
   fill: var(--hover-color);
 }
@@ -400,6 +400,10 @@ section {
   resize: none;
   padding-top: 12px;
   padding-left: 16px;
+}
+
+.modal-checkbox {
+  cursor: pointer;
 }
 
 .checkbox-flex {
