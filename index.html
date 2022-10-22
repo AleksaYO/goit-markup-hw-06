@@ -481,37 +481,53 @@
         <p class="modal-tittle">Залиште свої дані, ми вам передзвонимо</p>
           <form>
             <div class="form-name-box">
-              <label for="name">
-                <p class="form-text-modal">Ім'я</p>
-                <input type="name" class="modal-name" id="name" name="name" autocomplete="name" placeholder="">
+              <label class="modal-label">
+                <span class="form-text-modal">Ім'я</span>
+                <div class="input-wrap">
+                  <input type="name" class="input-modal" name="name" autocomplete="name" placeholder="">
+                  <svg width="18" height="18" class="icon-modal">
+                    <use href="./images/sprite.svg#icon-name-modal"></use>
+                  </svg>
+                </div>
               </label>
             </div>
             <div class="form-tel-box">
-              <label for="tel">
-                <p class="form-text-modal">Телефон</p>
-                <input type="tel" class="modal-tel" id="tel" name="tel" autocomplete="tel">
+              <label class="modal-label">
+                <span class="form-text-modal">Телефон</span>
+                <div class="input-wrap">
+                  <input type="tel" class="input-modal" name="tel" autocomplete="tel">
+                  <svg width="18" height="18" class="icon-modal">
+                    <use href="./images/sprite.svg#icon-tel-modal"></use>
+                  </svg>
+                </div>
               </label> 
             </div>
             <div class="form-email-box">
-              <label for="modal-email">
-                <p class="form-text-modal">Пошта</p>
-                <input type="email" class="modal-email" id="modal-email" name="modal-email" autocomplete="email">
+              <label class="modal-label">
+                <span class="form-text-modal">Пошта</span>
+                <div class="input-wrap">
+                  <input type="email" class="input-modal" name="modal-email" autocomplete="email">
+                  <svg width="18" height="18" class="icon-modal">
+                    <use href="./images/sprite.svg#icon-mail-modal"></use>
+                  </svg>
+                </div>
               </label>
             </div>
             <div class="form-textarea-box">
-              <label for="textarea">
-                <p class="form-text-modal">Коментар</p>
-                <textarea class="textarea" name="textarea" id="textarea" rows="8" placeholder="Введіть текст"></textarea>
+              <label class="modal-label">
+                <span class="form-text-modal">Коментар</span>
+                <textarea class="textarea" name="textarea" rows="8" placeholder="Введіть текст"></textarea>
               </label>
               </div>
-              <label for="agree" class="checkbox-flex">
+              <label for="checkbox" class="checkbox-flex">
                 <input type="checkbox" class="modal-checkbox" id="checkbox" name="agree">
-                <p class="checkbox-text">Погоджуюся з розсилкою та приймаю <a href="#" class="checkbox-link">Умови договору</a></p>
+                <span class="span-icon"></span>
+                <span class="checkbox-text">Погоджуюся з розсилкою та приймаю <a href="#" class="checkbox-link">Умови договору</a></span>
               </label>
             <button type="submit" class="form-modal-btn">Відправити</button>
           </form>
         <button type="button" data-modal-close class="modal-button">
-          <svg class="icon-modal" width="11" height="11">
+          <svg class="icon-modal-btn" width="11" height="11">
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>

@@ -258,8 +258,7 @@ section {
 
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility 250ms var(--cubic), opacity 250ms var(--cubic);
 }
 
 .backdrop.is-hidden {
@@ -315,13 +314,13 @@ section {
   transition: transform 1000ms var(--cubic);
 }
 
-.icon-modal {
+.icon-modal-btn {
   transform: rotateZ(0deg);
   transition: transform 1000ms var(--cubic);
 }
 
-.modal-button:hover .icon-modal,
-.modal-button:focus .icon-modal {
+.modal-button:hover .icon-modal-btn,
+.modal-button:focus .icon-modal-btn {
   transform: rotateZ(360deg);
 }
 
@@ -339,6 +338,7 @@ section {
 }
 
 .form-text-modal {
+  display: block;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -363,23 +363,10 @@ section {
   margin-bottom: 20px;
 }
 
-.modal-name {
+.input-modal {
   width: 100%;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-}
-
-.modal-tel {
-  width: 100%;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-}
-
-.modal-email {
-  width: 100%;
-
+  height: 40px;
+  padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
@@ -392,8 +379,6 @@ section {
   line-height: 14px;
   letter-spacing: 0.01em;
 
-  color: rgba(117, 117, 117, 0.5);
-
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -402,19 +387,43 @@ section {
   padding-left: 16px;
 }
 
+.textarea:focus {
+  outline: transparent;
+  border-color: var(--hover-color);
+}
+
+.textarea::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
 .modal-checkbox {
-  cursor: pointer;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .checkbox-flex {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
   margin-bottom: 30px;
 }
 
 .checkbox-text {
+  display: flex;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -423,12 +432,51 @@ section {
   letter-spacing: 0.03em;
 
   color: #757575;
+
+  align-items: center;
+  gap: 8px;
 }
 
 .checkbox-link {
   color: #2196f3;
   text-decoration: underline;
 }
+
+.span-icon {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.modal-checkbox:checked + .span-icon {
+  border: transparent;
+  background-image: url(../images/icon-check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--hover-color);
+}
+
+/* .checkbox-text::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+}
+
+.modal-checkbox:checked + .checkbox-text::before {
+  border: transparent;
+  background-color: var(--hover-color);
+  background-image: url(../images/sprite.svg#icon-check);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  fill: #ffffff;
+} */
 
 .form-modal-btn {
   display: block;
@@ -456,6 +504,25 @@ section {
 .form-modal-btn:focus {
   background-color: #188ce8;
   transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.icon-modal {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-modal:focus {
+  outline: transparent;
+  border: 1px solid var(--hover-color);
+}
+.input-modal:focus + .icon-modal {
+  fill: var(--hover-color);
 }
 
 /* --------------------------------------------- Чому ми? --------------------------------------------- */
@@ -892,6 +959,23 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+
+.form-input:focus {
+  outline: transparent;
+  border-color: var(--hover-color);
+}
+
+.form-input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* --------------------------------------------- Страница Портфолио --------------------------------------------- */
